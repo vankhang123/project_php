@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,8 @@
         include("../admin/modules/header.php");
         include("../admin/modules/menu.php");
         include("../admin/modules/main.php");
-        include("../admin/modules/footer.php")
+        include("../admin/modules/footer.php");
+    
         ?>
     </div>
 

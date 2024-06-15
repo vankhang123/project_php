@@ -13,12 +13,25 @@
             $tam = '';
         }
         if ($tam == 'danhmucsanpham') {
-            include("./main/main.php");
+            include("./main/danhmuc.php");
         } elseif ($tam == 'giohang') {
-            include("main/giohang.php");
+            include("./main/giohang.php");
         } elseif ($tam == 'lienhe') {
             include("main/lienhe.php");
-        } else {
+        } 
+       elseif ($tam == 'sanpham') {
+        include("./main/sanpham.php");
+       }
+        elseif ($tam == 'dangky') {
+            include("./main/dangky.php");
+           
+       } elseif ($tam == 'dangnhap') {
+        include("./main/dangnhap.php");
+       }
+       elseif ($tam == 'timkiem') {
+        include("./main/timkiem.php");
+       }
+       else {
             include("main/index.php");
         }
         ?>

@@ -1,10 +1,14 @@
 <?php
-  $sql_pro = "SELECT * FROM  tbl_sanpham,tbl_danhmuc WHERE tbl_sanpham.id_danhmuc=tbl_danhmuc.id_danhmuc 
-  ORDER BY tbl_sanpham.id_sanpham DESC  LIMIT 10" ;
-
+if(isset($_POST['timkiem'])) {
+    $tukhoa = $_POST['tukhoa'];
+}
+  $sql_pro = "SELECT * FROM  tbl_sanpham,tbl_danhmuc  WHERE  tbl_sanpham.id_danhmuc = tbl_danhmuc.id_danhmuc 
+  AND tbl_sanpham.tensanpham LIKE '%".$tukhoa."%'" ;
   $query_pro = mysqli_query($mysqli, $sql_pro); 
+  
 ?>
 
+<h3>Từ khóa tìm kiếm : <?php echo $_POST['tukhoa'] ?></h3>
 
 <ul class="maincontent_list">
     <?php 
@@ -21,7 +25,5 @@
     <?php 
     }
     ?>
-    
-
 
 </ul>

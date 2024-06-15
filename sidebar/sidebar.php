@@ -1,28 +1,19 @@
 <div class="sidebar">
     <ul class="product_list">
+
+    <?php  
+            $sql_danhmuc = "SELECT * FROM  tbl_danhmuc ORDER BY  id_danhmuc DESC ";
+            $query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
+             while($row = mysqli_fetch_array( $query_danhmuc )) {
+
+       ?>
         <li class="product_list_icon">
-            <i class="fa-solid fa-ticket"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=1">ốp lưng</a>
+        
+            <a href="index.php?quanly=danhsachsanpham&id=<?php echo $row['id_danhmuc'] ?>"> <?php echo $row['tendanhmuc'] ?></a>
         </li>
-        <li class="product_list_icon">
-            <i class=" icon_earphone fa-solid fa-headphones-simple"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=2">Tai nghe</a>
-        </li>
-        <li class="product_list_icon">
-            <i class=" icon_battery fa-solid fa-battery-empty"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=3">Cục sạc</a>
-        </li>
-        <li class="product_list_icon">
-            <i class=" icon_slack fa-brands fa-slack"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=4">Dán màn hình</a>
-        </li>
-        <li class="product_list_icon">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=5">Gậy tự sướng </a>
-        </li>
-        <li class="product_list_icon">
-            <i class="fa-solid fa-phone-volume"></i>
-            <a href="index.php?quanly=danhsachsanpham&id=6">Điện thoại</a>
-        </li>
+        <?php 
+        }
+        ?>
+        
     </ul>
 </div>

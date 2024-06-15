@@ -14,6 +14,7 @@
 
     <div class="wrapper">
         <?php
+        include("admin/config/config.php");
         include("./header.php");
         include("./menu.php");
         include("./main.php");
