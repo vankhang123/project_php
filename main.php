@@ -28,7 +28,7 @@
        } elseif ($tam == 'dangnhap') {
         include("./main/dangnhap.php");
        }
-       elseif ($tam == 'timkiem') {
+        elseif ($tam == 'timkiem') {
         include("./main/timkiem.php");
        }
        else {

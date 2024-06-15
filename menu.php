@@ -19,15 +19,10 @@ $query_danhmuc = mysqli_query($mysqli, $sql_danhmuc);
         <?php
         }
         ?>
-        <li class="list_menu_con"> <a href="index.php?quanly=giohang">Giỏ hàng</a></li>
+        <li class="list_menu_con"> <a href="index.php?quanly=giohang">Giỏ Hàng</a></li>
         <li class="list_menu_con"> <a href="index.php?quanly=dangky">Đăng Ký</a></li>
         <li class="list_menu_con"> <a href="index.php?quanly=lienhe">Liên hệ </a></li>
-        <li>
-            <form action = "index.php?quanly=timkiem" method = "POST">
-            <input type = "text" placeholder="Tìm kiếm sản phẩm..." name = "tukhoa">
-            <input type = "submit" name = "timkiem" value = "Tìm kiếm ">
-            </form>
-        </li>
+        
     </ul>
 
 </div>

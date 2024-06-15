@@ -1,9 +1,15 @@
+
+
 <div class="header">
     <ul class="header_list">
         <li class="header_list_con"> <img src="./img/clickbuy-logo.png"></li>
         <li class="header_list_con header_list_con--1">
-            <input type="text" placeholder="Bạn cần tìm gì..." class="header_list_input">
-            <i class="  search-icon fa-solid fa-magnifying-glass"></i>
+             <form action = "index.php?quanly=timkiem" method ="POST">
+             <input class="header_list_input" type = "text" placeholder="Tìm kiếm sản phẩm..." name = "tukhoa">
+            <input class ="search" type = "submit" name = "timkiem" value = "Tìm kiếm ">
+            </form>
+    
+            
         </li>
         <li class="header_list_con">
             <i class=" icon_phone fa-solid fa-phone-volume"></i>

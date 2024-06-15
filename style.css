@@ -8,22 +8,44 @@
     
 }
 .wrapper_chitiet {
-    border:1px solid #000;
+   
     height:100%;
     width:100%;
     margin:0 auto ;
+}
+.product_specific {
+    color:black;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 19px
 }
 .hinhanh_sanpham {
     float:left;
     width:40%;
 }
+.maincontent_list_con_child {
+    text-decoration:unset ;
+}
+.ten_sp {
+    font-weight:600;
+    font-size:19px;
+    margin-right:6px;
+}
 .hinhanh_img {
-    width:300px;
-    height:200px;
+    width:500px;
+    height:500px;
 }
 .chitiet_sanpham {
     float :right;
-    width:45%;
+    width:53%;
+    margin-top:12px;
+}
+.chitiet_sanpham p {
+    color :black;
+    font-weight:500;
+    font-size:17px;
+    margin-bottom:5px;
+
 }
 
 .header {
@@ -106,8 +128,8 @@ box-shadow: 0 1px 2px 0 rgba(60,64,67,.1), 0 2px 6px 2px rgba(60,64,67,.15);
 margin-bottom:14px;
 }
 .maincontent_list_con img {
- width:224px;
- height:182px;
+ width:222px;
+ height:190px;
  margin-right:8px;
  margin-top:10px; 
 }
@@ -117,6 +139,7 @@ font-size:16px;
 margin:5px 0px;
 margin-left:24px;
 font-weight:600;
+color:black;
 }
 
 .header_list {
@@ -136,14 +159,25 @@ align-items: center;
 .header_list_input {
    outline:none ;
    border-radius:5px;
-   border:1px solid transparent;;
+   border:1px solid transparent;
    padding:8px;
    width:264px;
    margin-top:20px;
+   position:relative;
+  
 }
-.header_list_input {
+.search {
+    position:absolute;
+    top:70%;
+    right:-14%;
+    transform:translate(-50%,-50%);
+    outline:none ;
+    border-radius:5px;
+    border:1px solid transparent;
+    padding:8px;
+    
+}
 
-}
 .text_call {
  color:white;
  font-size:15px;

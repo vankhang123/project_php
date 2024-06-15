@@ -11,7 +11,7 @@
     while($row_pro = mysqli_fetch_array($query_pro)) {
     ?>
     <li class="maincontent_list_con">
-         <a href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham' ] ?> " >
+         <a  class ="maincontent_list_con_child" href="index.php?quanly=sanpham&id=<?php echo $row_pro['id_sanpham' ] ?> " >
         <img src="admin/modules/quanlysp/uploads/<?php echo $row_pro['hinhanh']  ?>">
         <p>Tên sản phẩm:<?php echo $row_pro['tensanpham']  ?> </p>
         <p>Giá: <?php echo number_format ($row_pro['giasp'],0,',','.' ) ?>vnd </p>

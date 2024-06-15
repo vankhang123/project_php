@@ -11,40 +11,21 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    $sql = "SELECT * FROM tbl_admin WHERE username='$username' AND password ='$password' ";
-    $result = $mysqli->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $username;
-            header("Location: index.php");
-        } else {
-            $error = "Invalid password.";
-        }
+if (isset($_POST['dangnhap'])) {
+    $taikhoan = $_POST['username'];
+    $matkhau = md5($_POST['password']);
+    $sql = "SELECT * FROM tbl_admin WHERE username = '" .$taikhoan. "' AND password = '" .$matkhau. "'  LIMIT 1";
+    $row = mysqli_query($mysqli, $sql);
+    $count = mysqli_num_rows($row);
+    if ($count > 0) {
+        $_SESSION['dangnhap'] = $taikhoan;
+        header("Location:index.php");
     } else {
-        $error = "No user found with that username.";
+        echo '<script>alert("Tài khoản hoặc Mật khẩu không đúng, vui lòng nhập lại.")</script>';
+        header("Location:login.php");
     }
 }
-
-// if (isset($_POST['dangnhap'])) {
-//     $taikhoan = $_POST['username'];
-//     $matkhau = md5($_POST['password']);
-//     $sql = "SELECT * FROM tbl_admin WHERE username = '" .$taikhoan. "' AND password = '" .$matkhau. "'  LIMIT 1";
-//     $row = mysqli_query($mysqli, $sql);
-//     $count = mysqli_num_rows($row);
-//     if ($count > 0) {
-//         $_SESSION['dangnhap'] = $taikhoan;
-//         header("Location:index.php");
-//     } else {
-//         echo '<script>alert("Tài khoản hoặc Mật khẩu không đúng, vui lòng nhập lại.")</script>';
-//         header("Location:login.php");
-//     }
-// }
 ?>
 
 <!DOCTYPE html>
